@@ -13,10 +13,11 @@
 
 ## Introduction
 
-In this lab, we're going to change the DOM in two ways. First, we'll use
-Chrome's Developer Tools ("DevTools") to remove an element from the DOM. Then
-we'll use the DevTools' JavaScript console to run JavaScript that does the same
-thing.
+We've read that updating the DOM will update the browser's rendered page. Let's
+experience this now. We're going to change the DOM in two ways. First, we'll use
+Chrome's Developer Tools ("DevTools") and our mouse to remove an element from
+the DOM. Then we'll use the DevTools' JavaScript console to run JavaScript that
+does the same thing.
 
 ## Instructions
 
@@ -31,7 +32,8 @@ representation of the HTML source the browser loaded.
 
 ### Select an Element With Chrome DevTools
 
-Scroll through the Elements panel. You will see what looks like HTML. There are `head` tags, `body` tags, `div`s, etc.
+Scroll through the Elements panel. You will see some HTML: `head` tags, `body`
+tags, `div`s, etc.
 
 ![delete-header](http://web-dev-readme-photos.s3.amazonaws.com/js/header-click.png)
 
@@ -39,7 +41,7 @@ Now, from inside the developer console, locate and click on the element that
 says `header`. You will notice that the `header` section of the webpage is
 highlighted. You've now selected an element with the DevTools.
 
-### Delete an Element with Chrome DevTools
+### Delete an Element With Chrome DevTools
 
 ![deleted-header](http://web-dev-readme-photos.s3.amazonaws.com/js/deleted-header.png)
 
@@ -62,7 +64,7 @@ carefully-written HTML.
 The HTML, which lives on the server, **is unchanged**.
 
 Refresh the page by going to "View" and choosing "Reload this Page." You will be
-reloading the DOM from the source. The `header` will come back.
+reloading the DOM _from the source_. The `header` will come back.
 
 ### Demonstrate Opening the DevTools' JavaScript Console
 
@@ -86,7 +88,7 @@ Since `document` is an `object` which means that it has properties and `methods`
 we can imagine that by calling `methods` on it, it can return DOM elements.
 Let's find or `select` an element by speaking JavaScript with the DOM.
 
-### Select an Element with JavaScript
+### Select an Element With JavaScript
 
 In the **Console** type:
 
@@ -141,3 +143,5 @@ In this lesson you just did all that stuff! Learning to duplicate what you can
 do in DevTools with JavaScript **is** DOM programming. The next lessons are
 going to give you `methods` for selecting elements and changing them, but you
 just changed the DOM. High fives are in order.
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/fewpjs-changing-the-dom-with-dev-tools-and-javascript'>Changing the DOM with DevTools and JavaScript</a> on Learn.co and start learning to code for free.</p>
