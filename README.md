@@ -99,37 +99,44 @@ In the **Console** type:
 This will return something like this: `<header class="site-
 header">...</header>`. Go ahead and click on that disclosure triangle to see
 more. This is the DOM Node, a JavaScript `object`. This means that it, in turn,
-can have methods called on it! Let's save our header to a `variable`.
-
-```javascript
-  var headerObj = document.querySelector('header')
-```
+can have methods called on it! This is called _method chaining_. Let's use
+_method chaining_ to remoe our node from the DOM.
 
 ### Delete an Element with JavaScript
 
 Now type:
 
 ```javascript
-  headerObj.remove()
-```
-
-The header is gone! 
-
-If you refresh the page to get the `header` back, you could also try for some
-slightly advanced JavaScript:
-
-```javascript
   document.querySelector('header').remove()
 ```
 
-This is called method chaining. Since the call of `querySelector()` to the
-document object returned a header object which supported a method called
-`remove()`, we used dot-notation to chain the calls.
+The header is gone! We called `document.querySelector('header')` in order
+to get the node onto which we _chained_ the call to `remove()`. We use
+dot-notation to _chain_ the calls.
 
 ### Demonstrate That the Source is Not Changed When the DOM Is
 
 Follow the same process we followed earlier to verify that the source has not
 changed. To restore it, simply refresh the page (i.e. reload the DOM).
+
+### Preview JavaScript Variables
+
+Have you ever heard a celebrity or royalty refer to themselves in the third
+person repeatedly:
+
+"MC Egotrip is the greatest rapper ever to walk this earth. When
+MC Egotrip is hungry, he likes grilled cheese sandwiches, but not too much
+cheese or Gruy&egrave;re because MC Egotrip is mildly lactose intolerant."
+
+And then you think "Please, use a pronoun. '_I_' would be a good start!"
+
+In the same way our JavaScript code would be really annoying if we always
+had to refer to a node by looking it up with `document.querySelector`. We'd
+like to have JavaScript do that finding work finding the node _once_ and then
+_save_ our ability to refer to that node. That's exactly what _variables_ do.
+Just like pronouns in human communication, variables let us refer to
+a calculation, a process, or a value by giving it a name. In the next lesson
+we'll talk in depth about _variables_.
 
 ## Conclusion
 
