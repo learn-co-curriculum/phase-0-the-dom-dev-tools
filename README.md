@@ -100,7 +100,7 @@ This will return something like this: `<header class="site-
 header">...</header>`. Go ahead and click on that disclosure triangle to see
 more. This is the DOM Node, a JavaScript `object`. This means that it, in turn,
 can have methods called on it! This is called _method chaining_. Let's use
-_method chaining_ to remoe our node from the DOM.
+_method chaining_ to remove our node from the DOM.
 
 ### Delete an Element with JavaScript
 
