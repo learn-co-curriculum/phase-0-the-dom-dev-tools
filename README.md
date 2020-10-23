@@ -150,5 +150,3 @@ In this lesson you just did all that stuff! Learning to duplicate what you can
 do in DevTools with JavaScript **is** DOM programming. The next lessons are
 going to give you `methods` for selecting elements and changing them, but you
 just changed the DOM. High fives are in order.
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/fewpjs-changing-the-dom-with-dev-tools-and-javascript'>Changing the DOM with DevTools and JavaScript</a> on Learn.co and start learning to code for free.</p>
