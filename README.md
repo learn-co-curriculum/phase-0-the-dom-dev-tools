@@ -40,8 +40,8 @@ well.
 
 ![content-element](https://curriculum-content.s3.amazonaws.com/phase-0/the-dom-dev-tools/content-element.png)
 
-Finally, locate the `h1` element nested inside the "content" div. It
-should look something like this:
+Next, locate the `h1` element nested inside the "content" div. It should look
+something like this:
 
 ![h1-element](https://curriculum-content.s3.amazonaws.com/phase-0/the-dom-dev-tools/h1-element.png)
 
@@ -58,7 +58,7 @@ browser's rendered page.
 ### Demonstrate That the Source is Not Changed When the DOM Is
 
 View the page source. In the Chrome menu bar, click on "View", then select
-"Developer", then "View Source." You will see the that the HTML is just as it
+"Developer", then "View Source." You will see that the HTML is just as it
 always was, with the deleted element still present.
 
 ![html-source](https://curriculum-content.s3.amazonaws.com/phase-0/the-dom-dev-tools/html-source.png)
@@ -77,7 +77,7 @@ reloading the DOM _from the source_. The page content will come back.
 ### Demonstrate Opening the DevTools' JavaScript Console
 
 Above, we deleted an element by selecting it in the DevTools and pressing the
-delete key. We can accompolish the same thing using JavaScript.
+delete key. We can accomplish the same thing using JavaScript.
 
 In DevTools, click the **Console** tab. At the prompt, type the word `document`
 and press "Enter." You'll get a `#document` returned. If you hover your mouse
@@ -127,9 +127,9 @@ changed. To restore it, simply refresh the page (i.e. reload the DOM).
 
 ### Storing Node References in Variables
 
-`querySelector()` and the other methods we'll be learning about are expressions:
-they return a value (specifically, a DOM node). As such, we can save the results
-into a variable. For example:
+Query methods like `querySelector()` and the other methods we'll be learning
+about are expressions: they return a value (specifically, a DOM node). As such,
+we can save the results of the query into a variable. For example:
 
 ```js
 const header = document.querySelector('h1');
@@ -137,7 +137,7 @@ const header = document.querySelector('h1');
 
 We now have a reference to that node with a meaningful name; we can simply use
 `header` any time we need to refer to our node, rather than always having to
-look it up with `document.querySelector`.
+look it up with `document.querySelector()`.
 
 You can perhaps imagine how, if we have a program that selects, creates,
 modifies, or removes a large number of nodes, using this approach will result in
@@ -152,8 +152,8 @@ DOM programming is using JavaScript to:
 3. Adjust a property of the selected element(s)
 
 In this lesson you just did all that stuff! Learning to duplicate what you can
-do in DevTools with JavaScript **is** DOM programming. The next lessons are
-going to give you `methods` for selecting elements and changing them, but you
+do in DevTools with JavaScript ***is*** DOM programming. The next lessons are
+going to give you more methods for selecting elements and changing them, but you
 just changed the DOM. High fives are in order.
 
 [ada-wiki]: https://en.wikipedia.org/wiki/Ada_Lovelace
