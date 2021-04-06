@@ -85,7 +85,7 @@ over the element, you'll see the entire page highlighted in the browser window.
 If you expand it, you'll see that it's the exact HTML that you saw in the
 **Elements** tab.
 
-Recall that `document` is an `object`; as such, it has properties and `methods,`
+Recall that `document` is an `object`; as such, it has properties and `methods`,
 including a number of different methods that can be used to return elements.
 Let's find or `select` an element by speaking JavaScript with the DOM.
 
@@ -148,7 +148,7 @@ code that's easier to read, debug and maintain.
 DOM programming is using JavaScript to:
 
 1. Ask the DOM to find or `select` an HTML element or elements in the rendered page
-2. Remove the selected elements and/or insert a new element
+2. Remove the selected element(s) and/or insert new element(s)
 3. Adjust a property of the selected element(s)
 
 In this lesson you just did all that stuff! Learning to duplicate what you can
