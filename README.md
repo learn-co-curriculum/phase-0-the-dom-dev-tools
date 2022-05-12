@@ -105,7 +105,7 @@ This will return something like this:
 
 Go ahead and click on that disclosure triangle to see more.
 
-The return value of `document.querySelector('h1');` is the DOM node, which is
+When we run `document.querySelector('h1');`, it returns the DOM node, which is
 also a JavaScript `object`. This means that it, in turn, can have methods called
 on it! This is called _method chaining_. Let's use _method chaining_ to remove
 our node from the DOM.
