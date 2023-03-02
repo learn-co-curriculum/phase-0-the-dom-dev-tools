@@ -2,14 +2,14 @@
 
 ## Learning Goals
 
-* Demonstrate viewing the DOM through Chrome DevTools
-* Select an element with Chrome DevTools
-* Delete an element with Chrome DevTools
-* Demonstrate that the source is not changed when the DOM is
-* Demonstrate opening the DevTools' JavaScript console
-* Select an element with JavaScript
-* Delete an element with JavaScript
-* Storing node references in variables
+- Demonstrate viewing the DOM through Chrome DevTools
+- Select an element with Chrome DevTools
+- Delete an element with Chrome DevTools
+- Demonstrate that the source is not changed when the DOM is
+- Demonstrate opening the DevTools' JavaScript console
+- Select an element with JavaScript
+- Delete an element with JavaScript
+- Storing node references in variables
 
 ## Introduction
 
@@ -34,19 +34,25 @@ of the HTML source that was loaded into the browser.
 Scroll through the Elements panel. You will see some HTML: `head` tags, `body`
 tags, `div`s, etc. If the `body` element is collapsed, use the disclosure
 triangle to expand it. Notice that you can mouse over different elements in the
-Elements panel and see them highlighted in the browser window. Locate the `div`
-nested inside `body` that has an `id` attribute of "content" and expand that as
-well.
+Elements panel and see them highlighted in the browser window. We will continue
+to drill down until we get can see the DOM element for the page title:
 
-![content-element](https://curriculum-content.s3.amazonaws.com/phase-0/the-dom-dev-tools/content-element.png)
+- locate the `div` nested inside `body` that has a `class` of
+  "mw-page-container";
+- within that `div`, find the div with a `class` of "mw-page-container-inner";
+- within that `div`, find the `div` with a class of "mw-content-container";
+- within that `div`, find the `main` element with an `id` of "content";
+- finally, within the `main` element, find the `header` element.
 
-Next, locate the `h1` element nested inside the "content" div. It should look
+![header-element](https://curriculum-content.s3.amazonaws.com/phase-0/the-dom-dev-tools/header-element.png)
+
+Next, locate the `h1` element nested inside the "header" element. It should look
 something like this:
 
 ![h1-element](https://curriculum-content.s3.amazonaws.com/phase-0/the-dom-dev-tools/h1-element.png)
 
-Click on the `h1` element; you'll see that it's highlighted in the Elements
-panel. You've now selected an element with the DevTools.
+Click on the `h1` element; you'll see that the title is now highlighted in the
+rendered browser page. You've now selected an element with the DevTools.
 
 ### Delete an Element With Chrome DevTools
 
@@ -58,8 +64,10 @@ browser's rendered page.
 ### Demonstrate That the Source is Not Changed When the DOM Is
 
 View the page source. In the Chrome menu bar, click on "View", then select
-"Developer", then "View Source." You will see that the HTML is just as it
-always was, with the deleted element still present.
+"Developer", then "View Source." You will see that the HTML is just as it always
+was, with the deleted element still present. (Note that the `h1` element is
+quite far down on the page. To find it more easily, you might want to search the
+page for its `id`, "firstHeading".)
 
 ![html-source](https://curriculum-content.s3.amazonaws.com/phase-0/the-dom-dev-tools/html-source.png)
 
@@ -94,13 +102,15 @@ Let's find or `select` an element by speaking JavaScript with the DOM.
 In the **Console** type:
 
 ```javascript
-  document.querySelector('h1');
+document.querySelector("h1");
 ```
 
 This will return something like this:
 
 ```js
-<h1 id="firstHeading" class="firstHeading" lang="en">...</h1>
+<h1 id="firstHeading" class="firstHeading mw-first-heading">
+  ...
+</h1>
 ```
 
 Go ahead and click on that disclosure triangle to see more.
@@ -115,7 +125,7 @@ our node from the DOM.
 Now type:
 
 ```javascript
-  document.querySelector('h1').remove();
+document.querySelector("h1").remove();
 ```
 
 The heading is gone! We called `document.querySelector('h1')` to get the node;
@@ -132,7 +142,7 @@ about are expressions: they return a value (specifically, a DOM node). As such,
 we can save the results of the query into a variable. For example:
 
 ```js
-const header = document.querySelector('h1');
+const header = document.querySelector("h1");
 ```
 
 We now have a reference to that node with a meaningful name; we can simply use
@@ -147,12 +157,13 @@ code that's easier to read, debug and maintain.
 
 DOM programming is using JavaScript to:
 
-1. Ask the DOM to find or `select` an HTML element or elements in the rendered page
+1. Ask the DOM to find or `select` an HTML element or elements in the rendered
+   page
 2. Remove the selected element(s) and/or insert new element(s)
 3. Adjust a property of the selected element(s)
 
 In this lesson you just did all that stuff! Learning to duplicate what you can
-do in DevTools with JavaScript ***is*** DOM programming. The next lessons are
+do in DevTools with JavaScript **_is_** DOM programming. The next lessons are
 going to give you more methods for selecting elements and changing them, but you
 just changed the DOM. High fives are in order.
 
