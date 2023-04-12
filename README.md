@@ -9,7 +9,7 @@
 - Demonstrate opening the DevTools' JavaScript console
 - Select an element with JavaScript
 - Delete an element with JavaScript
-- Storing node references in variables
+- Store node references in variables
 
 ## Introduction
 
@@ -25,7 +25,7 @@ does the same thing.
 
 Let's head back to the [Wikipedia page for Ada Lovelace][ada-wiki]. From this
 web page, look at the Chrome menu bar at the top of the page. Click on "View",
-then select "Developer", then "Developer Tools." This will open the Google
+then select "Developer", then "Developer Tools." This will open the Chrome
 Developer Tools. Click on the "Elements" tab. Here we see the DOM representation
 of the HTML source that was loaded into the browser.
 
@@ -107,11 +107,7 @@ document.querySelector("h1");
 
 This will return something like this:
 
-```js
-<h1 id="firstHeading" class="firstHeading mw-first-heading">
-  ...
-</h1>
-```
+![h1 element returned by querySelector](https://curriculum-content.s3.amazonaws.com/phase-0/the-dom-dev-tools/returned-h1-element.png)
 
 Go ahead and click on that disclosure triangle to see more.
 
@@ -155,16 +151,16 @@ code that's easier to read, debug and maintain.
 
 ## Conclusion
 
-DOM programming is using JavaScript to:
+DOM programming is using JavaScript to do things like:
 
 1. Ask the DOM to find or `select` an HTML element or elements in the rendered
    page
 2. Remove the selected element(s) and/or insert new element(s)
 3. Adjust a property of the selected element(s)
 
-In this lesson you just did all that stuff! Learning to duplicate what you can
-do in DevTools with JavaScript **_is_** DOM programming. The next lessons are
-going to give you more methods for selecting elements and changing them, but you
-just changed the DOM. High fives are in order.
+Learning to duplicate what you can do in DevTools with JavaScript **_is_** DOM
+programming. The next lessons are going to give you more methods for selecting
+elements and changing them, but you just changed the DOM. High fives are in
+order.
 
 [ada-wiki]: https://en.wikipedia.org/wiki/Ada_Lovelace
